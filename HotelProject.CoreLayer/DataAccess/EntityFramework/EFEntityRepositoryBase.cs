@@ -34,7 +34,7 @@ namespace HotelProject.CoreLayer.DataAccess.EntityFramework
         {
             using (TContext context = new TContext())
             {
-                return context.Set<TEntity>().Find(filter);
+                return context.Set<TEntity>().SingleOrDefault(filter);
             }
         }
 
