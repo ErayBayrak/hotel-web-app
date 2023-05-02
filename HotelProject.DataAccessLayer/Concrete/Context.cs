@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.DataAccessLayer.Concrete
+namespace HotelProject.DataAccessLayer.Concrete.EntityFramework
 {
     public class Context:DbContext
     {
