@@ -4,6 +4,7 @@ using HotelProject.WebUI.DTOs.About;
 using HotelProject.WebUI.DTOs.HotelService;
 using HotelProject.WebUI.DTOs.Login;
 using HotelProject.WebUI.DTOs.Register;
+using HotelProject.WebUI.DTOs.Room;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace HotelProject.WebUI.Mapping
             CreateMap<LoginDto, AppUser>().ReverseMap();
             CreateMap<ResultAboutDto, About>().ReverseMap();
             CreateMap<UpdateAboutDto, About>().ReverseMap();
+            CreateMap<ResultRoomDto, Room>().ReverseMap();
         }
     }
 }
