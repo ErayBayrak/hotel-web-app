@@ -32,6 +32,9 @@ namespace HotelProject.BusinessLayer.DependencyResolvers.Autofac
             builder.RegisterType<TestimonialManager>().As<ITestimonialService>().SingleInstance();
             builder.RegisterType<EfTestimonialDal>().As<ITestimonialDal>().SingleInstance();
 
+            builder.RegisterType<AboutManager>().As<IAboutService>().SingleInstance();
+            builder.RegisterType<EfAboutDal>().As<IAboutDal>().SingleInstance();
+
         }
     }
 }
