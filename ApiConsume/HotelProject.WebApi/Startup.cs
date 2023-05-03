@@ -28,6 +28,8 @@ namespace HotelProject.WebApi
         {
             services.AddDbContext<Context>();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddCors(opt =>
             {
                 opt.AddPolicy("HotelApiCors", opts =>

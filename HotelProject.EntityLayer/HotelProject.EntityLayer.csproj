@@ -17,4 +17,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\HotelServiceDto\" />
+    <Folder Include="DTOs\SubscribeDto\" />
+    <Folder Include="DTOs\StaffDto\" />
+    <Folder Include="DTOs\TestimonialDto\" />
+  </ItemGroup>
+
 </Project>
