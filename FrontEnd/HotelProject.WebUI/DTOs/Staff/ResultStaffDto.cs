@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.EntityLayer.Concrete
+namespace HotelProject.WebUI.DTOs.Staff
 {
-    public class Staff
+    public class ResultStaffDto
     {
         public int StaffId { get; set; }
         public string Name { get; set; }
