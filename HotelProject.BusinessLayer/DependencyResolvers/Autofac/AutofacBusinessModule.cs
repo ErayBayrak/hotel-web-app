@@ -35,6 +35,9 @@ namespace HotelProject.BusinessLayer.DependencyResolvers.Autofac
             builder.RegisterType<AboutManager>().As<IAboutService>().SingleInstance();
             builder.RegisterType<EfAboutDal>().As<IAboutDal>().SingleInstance();
 
+            builder.RegisterType<BookingManager>().As<IBookingService>().SingleInstance();
+            builder.RegisterType<EfBookingDal>().As<IBookingDal>().SingleInstance();
+
         }
     }
 }
