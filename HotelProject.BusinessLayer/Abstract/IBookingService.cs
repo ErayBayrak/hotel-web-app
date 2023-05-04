@@ -15,5 +15,6 @@ namespace HotelProject.BusinessLayer.Abstract
         void Update(Booking booking);
         Booking Get(Expression<Func<Booking, bool>> filter);
         List<Booking> GetAll(Expression<Func<Booking, bool>> filter = null);
+        void UpdateStatusOfBooking(int id);
     }
 }

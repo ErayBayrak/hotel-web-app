@@ -9,7 +9,14 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.Concrete.EntityFramework
 {
-    public class EfBookingDal:EFEntityRepositoryBase<Booking,Context>,IBookingDal
+    public class EfBookingDal : EFEntityRepositoryBase<Booking, Context>, IBookingDal
     {
+        public void UpdateStatusOfBooking(int id)
+        {
+            Context context = new Context();
+            var result = context.Bookings.Where(x => x.BookingId == id).FirstOrDefault();
+            result.Status = "Onaylandı";
+            context.SaveChanges();
+        }
     }
 }

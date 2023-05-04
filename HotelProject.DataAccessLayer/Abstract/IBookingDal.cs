@@ -10,5 +10,6 @@ namespace HotelProject.DataAccessLayer.Abstract
 {
     public interface IBookingDal:IEntityRepository<Booking>
     {
+        void UpdateStatusOfBooking(int id);
     }
 }

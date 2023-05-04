@@ -43,5 +43,10 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _bookingDal.Update(booking);
         }
+
+        public void UpdateStatusOfBooking(int id)
+        {
+            _bookingDal.UpdateStatusOfBooking(id);
+        }
     }
 }
