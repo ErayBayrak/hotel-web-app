@@ -51,5 +51,11 @@ namespace HotelProject.WebApi.Controllers
             var value = _roomService.Get(x => x.RoomId == id);
             return Ok(value);
         }
+        [HttpGet("roomcount")]
+        public IActionResult GetCountOfRoom()
+        {
+            var values = _roomService.CountOfRoomNumber();
+            return Ok(values);
+        }
     }
 }

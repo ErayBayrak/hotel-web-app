@@ -24,6 +24,12 @@ namespace HotelProject.BusinessLayer.Concrete
             _roomDal.Add(room);
         }
 
+        public int CountOfRoomNumber()
+        {
+            var values = _roomDal.CountOfRooms();
+            return values;
+        }
+
         public void Delete(Room room)
         {
             _roomDal.Delete(room);

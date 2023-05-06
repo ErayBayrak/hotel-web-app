@@ -51,5 +51,7 @@ namespace HotelProject.WebApi.Controllers
             var value = _aboutService.Get(x => x.AboutId == id);
             return Ok(value);
         }
+     
+
     }
 }

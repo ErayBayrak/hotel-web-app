@@ -4,14 +4,16 @@ using HotelProject.DataAccessLayer.Concrete.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230506134355_mig_add_guest_class")]
+    partial class mig_add_guest_class
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -194,27 +196,6 @@ namespace HotelProject.DataAccessLayer.Migrations
                     b.HasKey("BookingId");
 
                     b.ToTable("Bookings");
-                });
-
-            modelBuilder.Entity("HotelProject.EntityLayer.Concrete.Guest", b =>
-                {
-                    b.Property<int>("GuestId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("GuestId");
-
-                    b.ToTable("Guests");
                 });
 
             modelBuilder.Entity("HotelProject.EntityLayer.Concrete.HotelService", b =>

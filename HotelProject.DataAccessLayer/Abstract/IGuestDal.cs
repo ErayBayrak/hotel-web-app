@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.Abstract
 {
-   public interface IStaffDal:IEntityRepository<Staff>
+   public interface IGuestDal:IEntityRepository<Guest>
     {
-        int CountOfStaffs();
+        int CountOfGuests();
     }
 }

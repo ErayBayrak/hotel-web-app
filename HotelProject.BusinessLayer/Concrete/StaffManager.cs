@@ -24,6 +24,12 @@ namespace HotelProject.BusinessLayer.Concrete
             _staffDal.Add(staff);
         }
 
+        public int CountOfStaffNumber()
+        {
+            var values = _staffDal.CountOfStaffs();
+            return values;
+        }
+
         public void Delete(Staff staff)
         {
             _staffDal.Delete(staff);

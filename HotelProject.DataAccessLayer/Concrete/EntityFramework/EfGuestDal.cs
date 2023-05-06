@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.Concrete.EntityFramework
 {
-    public class EfRoomDal : EFEntityRepositoryBase<Room, Context>, IRoomDal
+    public class EfGuestDal : EFEntityRepositoryBase<Guest, Context>, IGuestDal
     {
-        public int CountOfRooms()
+        public int CountOfGuests()
         {
-            using (Context context = new Context())
+            using(Context context = new Context())
             {
-                var values = (from x in context.Rooms
-                              select x.RoomId
-                              ).Count();
+                var values = (from x in context.Guests
+                              select x.GuestId
+                            ).Count();
                 return values;
             }
         }

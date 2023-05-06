@@ -15,5 +15,6 @@ namespace HotelProject.BusinessLayer.Abstract
         void Update(Staff staff);
         Staff Get(Expression<Func<Staff, bool>> filter);
         List<Staff> GetAll(Expression<Func<Staff, bool>> filter = null);
+        int CountOfStaffNumber();
     }
 }
