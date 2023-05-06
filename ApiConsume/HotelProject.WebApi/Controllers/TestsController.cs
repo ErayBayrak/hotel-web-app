@@ -26,5 +26,18 @@ namespace HotelProject.WebApi.Controllers
         {
             return Ok("Welcome");
         }
+
+        [HttpGet("[action]")]
+        public IActionResult Test3()
+        {
+            return Ok(new CreateToken().TokenCreateAdmin());
+        }
+
+        [Authorize(Roles ="Admin,Visitor")]
+        [HttpGet("[action]")]
+        public IActionResult Test4()
+        {
+            return Ok("Success");
+        }
     }
 }
