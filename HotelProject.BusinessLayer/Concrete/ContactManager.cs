@@ -1,4 +1,5 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
+using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,29 +12,36 @@ namespace HotelProject.BusinessLayer.Concrete
 {
     public class ContactManager : IContactService
     {
+        private IContactDal _contactDal;
+
+        public ContactManager(IContactDal contactDal)
+        {
+            _contactDal = contactDal;
+        }
+
         public void Add(Contact contact)
         {
-            throw new NotImplementedException();
+            _contactDal.Add(contact);
         }
 
         public void Delete(Contact contact)
         {
-            throw new NotImplementedException();
+            _contactDal.Delete(contact);
         }
 
         public Contact Get(Expression<Func<Contact, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _contactDal.Get(filter);
         }
 
         public List<Contact> GetAll(Expression<Func<Contact, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            return _contactDal.GetAll(filter);
         }
 
         public void Update(Contact contact)
         {
-            throw new NotImplementedException();
+            _contactDal.Update(contact);
         }
     }
 }

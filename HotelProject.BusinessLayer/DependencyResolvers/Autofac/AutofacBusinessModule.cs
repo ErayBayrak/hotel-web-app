@@ -41,6 +41,9 @@ namespace HotelProject.BusinessLayer.DependencyResolvers.Autofac
             builder.RegisterType<GuestManager>().As<IGuestService>().SingleInstance();
             builder.RegisterType<EfGuestDal>().As<IGuestDal>().SingleInstance();
 
+            builder.RegisterType<ContactManager>().As<IContactService>().SingleInstance();
+            builder.RegisterType<EfContactDal>().As<IContactDal>().SingleInstance();
+
         }
     }
 }
